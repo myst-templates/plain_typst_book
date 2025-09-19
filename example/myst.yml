@@ -1,0 +1,44 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 95be6ed1-c602-4f30-b128-bc604678eac1
+  title: plain_typst_book
+  # description:
+  # keywords: []
+  authors: 
+  - Luuk Fröling 
+  - Freek Pols
+
+  github: https://github.com/FreekPols/plain_typst_book
+  # To autogenerate a Table of Contents, run "myst init --write-toc"
+  date: 2025-09-19 
+
+  description: This is a test project for Jupyter Book template, with a description. Sounds good.. #preface
+
+  plugins:
+    - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/example/example.mjs
+    - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/iframe/iframe.mjs
+    - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/intermezzo/intermezzo.mjs
+    - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/exercise/pdf_exercise.mjs
+
+    
+  downloads:
+    - id: output-pdf1
+
+  exports:
+    - format: typst
+      template: ../
+      output: Test_typst_book_template.pdf
+      id: output-pdf1
+    
+  toc:
+  - file: README.md
+  - file: contents/chapter_1.md
+  - file: contents/chapter_2.md
+
+site:
+  template: book-theme
+  options:
+    style: https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/CSS/custom.css
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
