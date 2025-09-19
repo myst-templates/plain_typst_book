@@ -12,10 +12,5 @@ This repository, created by [Freek Pols](https://github.com/FreekPols/) and [Luu
 
 This template helps you quickly set up a structured book project with MyST and Typst, ensuring a professional layout and easy customization.
 
-## Features
-Coverpicture in the template, replace it with your own cover image.
-
-Description in the `myst.yml` file is automatically added as a preface, can be left blank.
-
 **License:**  
 Content is licensed under [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/).
