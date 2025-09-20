@@ -16,21 +16,30 @@
 
 
 #let template(
-  // The book's title.
+  // FRONTPAGE.
   title: "Book Title",
   subtitle: none,
   authors: "Your name",
   cover: "path",            // <— path to cover "images/cover.png"
+  cover_width: 12cm,    
+  
+  // PREFACE
   description: "description",
 
-  cover_width: 12cm,    
+  // SPECIFICATION
+  paper-size: "a4",       // https://typst.app/docs/reference/layout/page/#parameters-paper
+  margin: (),                          
+  
   // A color for the theme of the document
   theme: red.darken(30%),
   // The book's content.
   body
 ) = {
   
-  set page(numbering: none) //numbering off until first chapter
+  set page(
+    numbering: none,
+    paper-size,
+    ) //numbering off until first chapter
   
   set heading(numbering: (..args) => {
     let nums = args.pos()
@@ -101,6 +110,7 @@
     align(center, box(width: 50%, text(11pt, fill: gray.darken(30%), description)))
   }
 
+
 //OUTLINE OF THE BOOK
   pagebreak()
   show outline.entry.where(level: 1): it => {
@@ -113,17 +123,22 @@
 //RESETING NUMBERING
   show heading.where(level: 1): it => {
     pagebreak()
-    // Reset alle relevante tellers bij elk nieuw hoofdstuk
-    counter(figure).update(0)                // alle figuren (ongeacht kind)
-    counter(figure.where(kind: table)).update(0) // specifiek voor tabellen
+    // Reset all counters with a new chapter
+    counter(figure).update(0)                // all figures (irrespective of kind)
+    counter(figure.where(kind: table)).update(0) // specific for tables
     counter(math.equation).update(0)
 
     it
   }
 
-// INCLUDE PAGENUMBER AND SET IT TO 1 AT FIRST PAGE OF CONTENT
-  set page(numbering: "1")
-  counter(page).update(1)
+
+// PAGE LAY OUT OF CONTENT
+  set page(
+    numbering: "1",         //turn on numbering
+    margin: (left: 20%),    //set left margin
+    )   
+
+  counter(page).update(1)   //set number to 1
 
 
   // Display the book's contents.
