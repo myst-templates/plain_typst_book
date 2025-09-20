@@ -19,7 +19,13 @@ template.typ 'reads' the content from the myst.yml file and makes it available f
 
 aside.typ is a file that helps to convert MyST aside to Typst notes.
 
+You can specify a logo and a cover in your myst.yml file.
 
+  options:
+    logo: logo.svg
+    cover: Cover.PNG
+
+The cover will be placed on the cover page, the logo will be placed in the header of each page.
 
 **License:**  
 Content is licensed under [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/).

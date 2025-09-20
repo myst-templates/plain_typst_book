@@ -9,28 +9,22 @@ files:
   - style.typ
   - aside_style.typ
   - LICENSE
-  - Cover.PNG
+  
 authors:
-  - name: Rowan Cockett
-    github: rowanc1
-    affiliations:
-      - Curvenote
-  - name: Franklin Koch
-    github: fwkoch
-    affiliations:
-      - Curvenote
   - name: Freek Pols
     github: FreekPols
+    affiliations:
+      - Delft University of Technology
+  - name: Luuk Fröling
+    github: luukfroling
     affiliations:
       - Delft University of Technology
 version: 0.0.2
 license: MIT
 tags:
-  - preprint
-  - article
-  - paper
-thumbnail: ./examples/pixels/files/screenshot.png
-github: https://github.com/myst-templates/lapreprint-typst
+  - book
+# thumbnail: ./examples/pixels/files/screenshot.png
+github: https://github.com/myst-templates/plain_typst_book
 doc:
   - id: title
     required: true
@@ -51,4 +45,7 @@ options:
   - id: kind
     type: string
     description: The "kind" of the content, e.g. "Original Research" - shown as the title of the margin content on the first page
+  - id: cover
+    type: file
+    description: An image path that is shown in the front page
 parts: []

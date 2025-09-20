@@ -15,11 +15,20 @@
 [# if doc.authors #]
   authors: "[# for author in doc.authors #][- author.name -][# if not loop.last #], [# endif #][# endfor #]",
 [# endif #]
-  cover: "Cover.PNG",
+
+[# if options.logo #]
+  logo: "[-options.logo-]",
+[# endif #]
+
+[# if options.cover #]
+  cover: "[-options.cover-]",
+[# endif #]
 
   description: "[-doc.description-]",
-
+  
 )
+
+
 
 [-IMPORTS-]
 
