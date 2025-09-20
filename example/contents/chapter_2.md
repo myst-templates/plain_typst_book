@@ -45,7 +45,7 @@ The situation is sketched in {numref}`fig:HailStoneFriction` using a Free body d
 :align: center
 :alt: A free body diagram of a base jumper of mass m, with downward velocity and gravitational force, and upward buoyant and friction force.
 
-Force acting on the jumper. 
+Forces acting on the jumper. 
 ```
 
 - $m$ = mass of jumper (in kg);  
