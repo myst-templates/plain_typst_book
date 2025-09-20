@@ -5,6 +5,7 @@ project:
   title: plain_typst_book
   # description:
   # keywords: []
+  
   authors: 
   - Luuk Fröling 
   - Freek Pols
@@ -36,9 +37,13 @@ project:
   - file: contents/chapter_1.md
   - file: contents/chapter_2.md
 
+  options:
+    logo: logo.svg
+    cover: Cover.PNG
+
 site:
   template: book-theme
   options:
     style: https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/CSS/custom.css
   #   favicon: favicon.ico
-  #   logo: site_logo.png
+    # logo: logo.svg
