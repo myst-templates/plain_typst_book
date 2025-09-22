@@ -108,7 +108,8 @@
       text(14pt, fill: red.darken(50%), "Preface")
     )
     v(1em)
-    align(center, box(width: 50%, text(11pt, fill: gray.darken(30%), description)))
+    set par(justify: true)
+    align(center, box(width: 70%, text(11pt, overhang: true, font:  "New Computer Modern", fill: gray.darken(30%), description)))
   }
 
 
