@@ -8,7 +8,7 @@ This repository, created by [Freek Pols](https://github.com/FreekPols/) and [Luu
 
 - **Cover page**: Includes the book title, a cover figure, and author names.
 - **Preface**: Automatically generated from the `description` section in the `myst.yml` file.
-- **Table of Contents**: Generated with a depth of 2 for clear navigation.
+- **Table of Contents**: Generated with a depth of 2 by default, can be specified in the myst.yml.
 
 This template helps you quickly set up a structured book project with MyST and Typst, ensuring a professional layout and easy customization.
 
@@ -19,11 +19,12 @@ template.typ 'reads' the content from the myst.yml file and makes it available f
 
 aside.typ is a file that helps to convert MyST aside to Typst notes.
 
-You can specify a logo and a cover in your myst.yml file.
+You can specify a logo, cover and ToC_depth in your myst.yml file.
 
-  options:
-    logo: logo.svg
-    cover: Cover.PNG
+- options:
+  - logo: logo.svg    // replace with your own logo, at top of the paper
+  - cover: Cover.PNG  // replace with your own cover image
+  - ToC_depth: 2      // set depth of the table of contents, 2 by default
 
 The cover will be placed on the cover page, the logo will be placed in the header of each page.
 
