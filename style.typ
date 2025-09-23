@@ -30,6 +30,7 @@
   paper-size: "a4",       // https://typst.app/docs/reference/layout/page/#parameters-paper
   margin: (),                          
   logo: none,
+  ToC_depth: 2,
 
   // A color for the theme of the document
   theme: red.darken(30%),
@@ -119,7 +120,7 @@
     v(12pt, weak: true)
     strong(it)
   }
-  outline(indent: auto)
+  outline(depth: ToC_depth, indent: auto)
 
 
 //RESETING NUMBERING

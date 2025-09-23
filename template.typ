@@ -24,8 +24,12 @@
   cover: "[-options.cover-]",
 [# endif #]
 
+[# if options.ToC_depth #]
+  ToC_depth: [-options.ToC_depth-],
+[# endif #]
+
   description: "[-doc.description-]",
-  
+
 )
 
 
