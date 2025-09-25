@@ -35,9 +35,12 @@ Include [this file](https://github.com/TUD-JB-Templates/JB2/blob/main/.github/wo
 ### Build locally
 It is assumed you have MyST working on your computer and you can run the commands `myst build --pdf` and `myst start`.
 
+```{warning} should be edited
+```
+- specify the GitHub repo in your `myst.yml` file as a template (include `*.git` at the end of the URL) or clone the repo and use it locally
 - clone or download the repo, navigate your CLI to `./examples/` and run `myst build --pdf` to generate the PDF document; `myst start` will build the website and start a local server to view it
 - clone or download the repo and copy the files in root to the working directory of your MyST book project; specify the directory with the files in your `myst.yml` file
-- specify the GitHub repo in your `myst.yml` file as a template (include `*.git` at the end of the URL)
+
 
 ## Ideas
 
