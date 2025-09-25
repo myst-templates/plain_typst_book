@@ -51,4 +51,7 @@ options:
   - id: ToC_depth
     type: number
     description: number to set the depth of ToC
+  - id: logo_width
+    type: number
+    description: sets width of logo
 parts: []

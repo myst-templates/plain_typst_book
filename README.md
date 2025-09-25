@@ -7,6 +7,7 @@ The template features:
 - **Cover page**: Includes the book title, a cover figure, and author names.
 - **Preface**: Automatically generated from the `description` section in the `myst.yml` file.
 - **Table of Contents**: Generated with a depth of 2 by default, can be specified in the myst.yml.
+- **Logo**: A logo at the top of each page
 
 The PDF document contained in the repository in subdirectory `examples/` is generated using this template and will be updated when significant changes are made. A preview of the cover page is shown here:
 
@@ -57,6 +58,7 @@ You can specify a logo, cover and ToC_depth in your `myst.yml` file.
     logo: logo.svg    // replace with your own logo, at top of the paper
     cover: Cover.PNG  // replace with your own cover image
     ToC_depth: 2      // set depth of the table of contents, 2 by default
+    logo_width: 10    // set a number (0-100) to set the logo width
 ```
 
 The cover will be placed on the cover page, the logo will be placed in the header of each page.
