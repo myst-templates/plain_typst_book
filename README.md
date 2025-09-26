@@ -29,6 +29,7 @@ Include the following in your `myst.yml` file:
       template: https://github.com/myst-templates/plain_typst_book.git
       output: export/book.pdf
       id: output-pdf1
+      # additional options
 ```
 
 Include [this file](https://github.com/TUD-JB-Templates/JB2/blob/main/.github/workflows/deploy-pdf-typst.yml) in `.github/workflows`. If you go to the `Actions` tab of your GitHub repository, you can manually trigger the workflow to build the PDF document. The resulting PDF will be available and can be downloaded from the GH-page of your book.
@@ -51,17 +52,21 @@ File `template.typ` 'reads' the content from the `myst.yml` file and makes it av
 
 Files `aside_style.typ` is a file that helps to convert MyST aside to Typst notes.
 
-You can specify a logo, cover and ToC_depth in your `myst.yml` file.
+You can specify a logo, cover and ToC_depth in your `myst.yml` file, under exports.
 
 ```yaml
-  options:
-    logo: logo.svg    // replace with your own logo, at top of the paper
-    cover: Cover.PNG  // replace with your own cover image
-    ToC_depth: 2      // set depth of the table of contents, 2 by default
-    logo_width: 10    // set a number (0-100) to set the logo width
+  exports:
+    - format: typst
+      template: ../
+      output: Test_typst_book_template2.pdf
+      id: output-pdf1
+      cover: Cover.PNG                        // replace with your own cover image
+      logo: logo.svg                          // replace with your own logo, at top of the paper
+      logo_width: 10                          // set a number (0-100) to set the logo width
+      ToC_depth: 1                            // set depth of the table of contents, 2 by default
 ```
 
-The cover will be placed on the cover page, the logo will be placed in the header of each page.
+The cover will be placed on the cover page, the logo will be placed in the header of each content page.
 
 ## License
 

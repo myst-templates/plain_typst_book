@@ -31,16 +31,16 @@ project:
       template: ../
       output: Test_typst_book_template2.pdf
       id: output-pdf1
+      cover: Cover.PNG
+      logo: logo.svg
+      logo_width: 10
+      ToC_depth: 1
+
     
   toc:
   - file: README.md
   - file: contents/chapter_1.md
   - file: contents/chapter_2.md
-
-  options:
-    logo: logo.svg
-    cover: Cover.PNG
-    logo_width: 10
 
 site:
   template: book-theme
