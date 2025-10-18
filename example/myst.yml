@@ -22,25 +22,21 @@ project:
     - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/intermezzo/intermezzo.mjs
     - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/exercise/pdf_exercise.mjs
 
-    
-  downloads:
-    - id: output-pdf1
 
-  exports:
-    - format: typst
-      template: ../
-      output: Test_typst_book_template2.pdf
-      id: output-pdf1
-      cover: Cover.PNG
-      logo: logo.svg
-      logo_width: 10
-      ToC_depth: 1
+      
+      # cover: Cover.PNG
+      # logo: logo.svg
+      # logo_width: 10
+      # ToC_depth: 1
 
     
   toc:
   - file: README.md
   - file: contents/chapter_1.md
   - file: contents/chapter_2.md
+
+extends:
+  - export.yml
 
 site:
   template: book-theme
