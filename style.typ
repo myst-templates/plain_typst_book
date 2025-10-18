@@ -26,19 +26,23 @@
   // PREFACE
   description: "description",
 
-  // SPECIFICATION
+  // SPECIFICATION of output
   paper-size: "a4",       // https://typst.app/docs/reference/layout/page/#parameters-paper
   margin: (),                          
   logo: none,
   logo_width: 10%,
   ToC_depth: 2,
 
+  
+  // font: "arial", 
+  fontsize: 12pt,
+
   // A color for the theme of the document
   theme: red.darken(30%),
   // The book's content.
   body
 ) = {
-  
+
   set page(
     numbering: none,
     paper-size,
@@ -140,10 +144,10 @@
   set page(
     numbering: "1",         //turn on numbering
     margin: (left: 20%),    //set left margin
-    header: if logo != none { align(center)[#image(logo, width: logo_width)] } else { none }//include logo
-
-
+    header: if logo != none { align(center)[#image(logo, width: logo_width)] } else { none },//include logo
   )   
+
+  set text(size: fontsize)
 
   counter(page).update(1)   //set number to 1
 
