@@ -30,6 +30,7 @@
   paper-size: "a4",       // https://typst.app/docs/reference/layout/page/#parameters-paper
   margin: (),                          
   logo: none,
+  logo_width: 10%,
   ToC_depth: 2,
 
   // A color for the theme of the document
@@ -139,7 +140,7 @@
   set page(
     numbering: "1",         //turn on numbering
     margin: (left: 20%),    //set left margin
-    header: if logo != none { align(center)[#image(logo)] } else { none }//include logo
+    header: if logo != none { align(center)[#image(logo, width: logo_width)] } else { none }//include logo
 
 
   )   

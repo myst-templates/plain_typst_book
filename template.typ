@@ -20,6 +20,11 @@
   logo: "[-options.logo-]",
 [# endif #]
 
+[# if options.logo_width #]
+  logo_width: [-options.logo_width-]%,
+[# endif #]
+
+
 [# if options.cover #]
   cover: "[-options.cover-]",
 [# endif #]
