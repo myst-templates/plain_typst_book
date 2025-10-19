@@ -14,3 +14,9 @@ project:
       logo: logo.svg
       logo_width: 10
       ToC_depth: 1
+
+      papersize: a4
+      # margin: 10
+      # fontstyle:  New Computer Modern
+      fontsize: 12
+      colortheme: blue.darken(30%)

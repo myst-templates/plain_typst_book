@@ -54,4 +54,16 @@ options:
   - id: logo_width
     type: number
     description: sets width of logo
+  - id: papersize
+    type: string
+    description: sets papersize
+  - id: colortheme
+    type: string
+    description: sets the theme color
+  - id: fontstyle
+    type: string
+    description: sets the font
+  - id: fontsize
+    type: number
+    description: sets the fontsize
 parts: []
