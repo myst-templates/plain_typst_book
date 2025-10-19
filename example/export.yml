@@ -1,6 +1,8 @@
 version: 1
 project:
       
+# probably include the plugins as well
+
   downloads:
     - id: output-pdf1
 
@@ -10,13 +12,33 @@ project:
       template: ../
       output: Test_typst_book_template2.pdf
       # additional options
+
+      #### Cover picture
       cover: Cover.PNG
+      #Coverposition:
+      # coverwidth:
+
+      #### Logo at top of position
       logo: logo.svg
       logo_width: 10
-      ToC_depth: 1
 
+      #### Toc
+    # show_toc (bool)      
+      ToC_depth: 1
+      
+      
+      #### Page settings
       papersize: a4
-      # margin: 10
+      # margin: 10 (left/right/top bottom)  
       # fontstyle:  New Computer Modern
       fontsize: 12
+      # Linespacing
+      # Justification
+      # Show pagenumber (bool)
+
       colortheme: blue.darken(30%)
+      #colorheadings: 
+      
+      
+      
+      
