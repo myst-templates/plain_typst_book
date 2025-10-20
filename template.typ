@@ -16,6 +16,7 @@
   authors: "[# for author in doc.authors #][- author.name -][# if not loop.last #], [# endif #][# endfor #]",
 [# endif #]
 
+
 // logo for top page
 [# if options.logo #]
   logo: "[-options.logo-]",
@@ -26,20 +27,44 @@
   logo_width: [-options.logo_width-]%,
 [# endif #]
 
+
 // cover picture
 [# if options.cover #]
   cover: "[-options.cover-]",
 [# endif #]
 
+[# if options.cover_width #]
+  cover_width: [-options.cover_width-]cm,
+[# endif #]
+
+[# if options.coverposition #]
+  coverposition: [-options.coverposition-]cm,
+[# endif #]
+
+
+
 //specify depth of table of contents
+
+[# if options.show_ToC is defined#]
+  show_ToC: [-options.show_ToC-],
+[# endif #]
+
 [# if options.ToC_depth #]
   ToC_depth: [-options.ToC_depth-],
 [# endif #]
 
 
+
+//Page settings
 [# if options.papersize #]
   paper-size: "[-options.papersize-]",
 [# endif #]
+
+[# if options.show_pagenumber is defined #]
+  show_pagenumber: "[-options.show_pagenumber-]",
+[# endif #]
+
+
 
 [# if options.colortheme #]
   theme: [-options.colortheme-],
@@ -52,6 +77,15 @@
 [# if options.fontsize #]
   fontsize: [-options.fontsize-]pt,
 [# endif #]
+
+[# if options.linespacing #]
+  linespacing: [-options.linespacing-]em,
+[# endif #]
+
+[# if options.justification is defined #]
+  justification: [-options.justification-],
+[# endif #]
+
 
   description: "[-doc.description-]",
 

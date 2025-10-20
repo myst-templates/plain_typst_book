@@ -36,34 +36,75 @@ doc:
   - id: keywords
   - id: doi
   - id: venue
+
 options:
   # type: string
   # description: Venue shown in the footer
-  - id: logo
-    type: file
-    description: An image path that is shown in the top right of the page
   - id: kind
     type: string
     description: The "kind" of the content, e.g. "Original Research" - shown as the title of the margin content on the first page
+
+
+# Include a figure at the cover page
   - id: cover
     type: file
     description: An image path that is shown in the front page
+  - id: coverposition
+    type: number
+    description: Sets the vertical position of the cover 
+  - id: cover_width
+    type: number
+    description: Sets the width of the coverfigure
+
+
+# ToC
   - id: ToC_depth
     type: number
     description: number to set the depth of ToC
+  - id: show_ToC
+    type: boolean
+    description: show ToC (default 1)
+
+# Page settings
+  - id: logo
+    type: file
+    description: An image path that is shown in the top right of the page
   - id: logo_width
     type: number
     description: sets width of logo
   - id: papersize
     type: string
     description: sets papersize
-  - id: colortheme
-    type: string
-    description: sets the theme color
+  - id: show_pagenumber
+    type: boolean
+    description: shows page number (default 1)
+
+
+  # font
   - id: fontstyle
     type: string
     description: sets the font
   - id: fontsize
     type: number
     description: sets the fontsize
+  - id: margin
+    type: number
+    description: sets the margins
+  - id: linespacing
+    type: number
+    description: sets the linespancing (default 0.5 (em))
+  - id: justification
+    type: boolean
+    description: sets the justifcation 
+
+ 
+  - id: colortheme
+    type: string
+    description:
+  - id: colorheadings
+    type: string
+    description: color of the headings
+
+
+
 parts: []

@@ -11,34 +11,38 @@ project:
       format: typst
       template: ../
       output: Test_typst_book_template2.pdf
-      # additional options
+# additional options #
 
-      #### Cover picture
+# Include a figure at the cover page
       cover: Cover.PNG
-      #Coverposition:
-      # coverwidth:
+      coverposition: 1
+      cover_width: 5
+
+# ToC
+      ToC_depth: 1
+      show_ToC: false
+
+
+# Page settings
 
       #### Logo at top of position
       logo: logo.svg
       logo_width: 10
 
-      #### Toc
-    # show_toc (bool)      
-      ToC_depth: 1
-      
-      
-      #### Page settings
+      #### Looks
       papersize: a4
-      # margin: 10 (left/right/top bottom)  
-      # fontstyle:  New Computer Modern
-      fontsize: 12
-      # Linespacing
-      # Justification
-      # Show pagenumber (bool)
+      # margin: 
+      show_pagenumber: true
 
+      #### Fonts
+      fontsize: 12
+      fontstyle: New Computer Modern
+      linespacing: .5
+      justification: false
+      
       colortheme: blue.darken(30%)
       #colorheadings: 
       
       
       
-      
+

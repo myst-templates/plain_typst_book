@@ -22,19 +22,28 @@
   authors: "Your name",
   cover: none,            // <— path to cover "images/cover.png"
   cover_width: 12cm,    
-  
+  coverposition: 1cm,
+  justification: false,
+
+  // TOC
+  ToC_depth: 2,
+  show_ToC: true,
+
   // PREFACE
   description: "description",
 
   // SPECIFICATION of output
   paper-size: "a4",       // https://typst.app/docs/reference/layout/page/#parameters-paper
   margin: (),                          
+  linespacing: .5em,
+  show_pagenumber: false,
+
   logo: none,
   logo_width: 10%,
-  ToC_depth: 2,
+  
 
   
-  // font: "arial", 
+  font: "arial", 
   fontsize: 12pt,
 
   // A color for the theme of the document
@@ -91,8 +100,8 @@
   }
 
     if cover != none {
-      v(1em)
-      align(center, image(cover)) //, width: cover_width))
+      v(coverposition)
+      align(center, image((cover), width: cover_width))
     }
 
   //author
@@ -121,12 +130,13 @@
 
 //OUTLINE OF THE BOOK
   pagebreak()
-  show outline.entry.where(level: 1): it => {
-    v(12pt, weak: true)
-    strong(it)
+  if show_ToC == true {
+    show outline.entry.where(level: 1): it => {
+      v(12pt, weak: true)
+      strong(it)
+    }
+    outline(depth: ToC_depth, indent: auto)
   }
-  outline(depth: ToC_depth, indent: auto)
-
 
 //RESETING NUMBERING
   show heading.where(level: 1): it => {
@@ -142,12 +152,19 @@
 
 // PAGE LAY OUT OF CONTENT
   set page(
-    numbering: "1",         //turn on numbering
+    numbering: if show_pagenumber == true {"1"} else {none},         //turn on numbering
     margin: (left: 20%),    //set left margin
     header: if logo != none { align(center)[#image(logo, width: logo_width)] } else { none },//include logo
   )   
 
-  set text(size: fontsize)
+  set text(
+    font: font,
+    size: fontsize
+    )
+  set par(
+    leading: linespacing,
+    justify: justification
+    )
 
   counter(page).update(1)   //set number to 1
 
