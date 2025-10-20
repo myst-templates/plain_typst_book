@@ -65,13 +65,13 @@ extends:
   - export.yml
 ```
 
-```{code-block} yaml
-:filename: export.yml
-
+`export.yml` file:
+```yaml
 version: 1
 project:
-      
-# probably include the plugins as well
+
+  plugins:
+    - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/exercise/pdf_exercise.mjs
 
   downloads:
     - id: output-pdf1
@@ -92,9 +92,7 @@ project:
       ToC_depth: 2
       show_ToC: true
 
-
 # Page settings
-
       #### Logo at top of position
       logo: logo.svg
       logo_width: 10
@@ -103,18 +101,19 @@ project:
       papersize: a4
       margin_top: 2 #cm
       margin_bottom: 2 #cm
-      margin_left: 20 #%
+      margin_left: 10 #%
       margin_right: 10 #%
       show_pagenumber: true
 
       #### Fonts
       fontsize: 12
-      fontstyle: New Computer Modern
+      fontstyle: 
       linespacing: .5
       justification: false
       
       colortheme: blue.darken(30%)
-      #colorheadings:   
+      #colorheadings: 
+      
 ```
 
 ```{note}

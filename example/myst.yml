@@ -20,7 +20,7 @@ project:
     - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/example/example.mjs
     - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/iframe/iframe.mjs
     - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/intermezzo/intermezzo.mjs
-    - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/exercise/pdf_exercise.mjs
+    
 
 
   toc:

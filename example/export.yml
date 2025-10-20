@@ -1,7 +1,8 @@
 version: 1
 project:
-      
-# probably include the plugins as well
+
+  plugins:
+    - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/exercise/pdf_exercise.mjs
 
   downloads:
     - id: output-pdf1
@@ -22,9 +23,7 @@ project:
       ToC_depth: 2
       show_ToC: true
 
-
 # Page settings
-
       #### Logo at top of position
       logo: logo.svg
       logo_width: 10

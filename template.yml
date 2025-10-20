@@ -109,7 +109,7 @@ options:
  
   - id: colortheme
     type: string
-    description:
+    description: theme color 
   - id: colorheadings
     type: string
     description: color of the headings

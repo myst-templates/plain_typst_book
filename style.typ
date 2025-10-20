@@ -51,6 +51,7 @@
 
   // A color for the theme of the document
   theme: red.darken(30%),
+  colorheadings: green,
   // The book's content.
   body
 ) = {
@@ -63,12 +64,9 @@
   set heading(numbering: (..args) => {
     let nums = args.pos()
     let level = nums.len()
-    if level == 1 {
-      [#numbering("1.", ..nums)]
-    } else {
-      [#numbering("1.1.1", ..nums)]
-    }
-  })
+    if level == 1 {[#numbering("1.", ..nums)]} else {[#numbering("1.1.1", ..nums)]}
+    }   
+)
 
   // Set figure numbering to x.y where x is chapter number and y is figure number within chapter
 
