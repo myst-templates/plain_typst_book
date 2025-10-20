@@ -37,14 +37,17 @@
   margin: (),                          
   linespacing: .5em,
   show_pagenumber: false,
-
+  margin_top: 2cm,
+  margin_bottom: 2cm,
+  margin_left: 20%,
+  margin_right: 10%,
   logo: none,
   logo_width: 10%,
   
 
   
-  font: "arial", 
-  fontsize: 12pt,
+  font: "Libertinus Serif", 
+  fontsize: 11pt,
 
   // A color for the theme of the document
   theme: red.darken(30%),
@@ -153,7 +156,12 @@
 // PAGE LAY OUT OF CONTENT
   set page(
     numbering: if show_pagenumber == true {"1"} else {none},         //turn on numbering
-    margin: (left: 20%),    //set left margin
+    margin: (
+      top: margin_top,
+      bottom: margin_bottom,
+      left: margin_left,
+      right: margin_right 
+      ),    //set left margin
     header: if logo != none { align(center)[#image(logo, width: logo_width)] } else { none },//include logo
   )   
 

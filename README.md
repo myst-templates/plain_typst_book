@@ -4,10 +4,16 @@ This repository, created by [Freek Pols](https://github.com/FreekPols/) and [Luu
 
 The template features:
 
-- **Cover page**: Includes the book title, a cover figure, and author names.
+- **Cover page**: Includes the book title, a cover figure, and author names. The cover figure can be vertically positioned (`coverpostion`) and resized (`cover_width`)
 - **Preface**: Automatically generated from the `description` section in the `myst.yml` file.
-- **Table of Contents**: Generated with a depth of 2 by default, can be specified in the myst.yml.
-- **Logo**: A logo at the top of each page
+- **Table of Contents**: Generated with a depth of 2 by default, can be specified in the myst.yml, the ToC can be toggled on/off using `show_ToC`
+- **Logo**: A logo at the top of each page, with adjustable width (`logo_width`)
+- **Adjustable layout**: Customizable page size (`papersize`), margins (`_top _bottom _left _right`), fonts (`fontstyle` and `fontsize`), line spacing (`linespacing`) and toggling pagenumber (`show_pagenumber`), justification and color themes (`colortheme` and `colorheadings`).
+
+
+
+# Page settings
+
 
 The PDF document contained in the repository in subdirectory `examples/` is generated using this template and will be updated when significant changes are made. A preview of the cover page is shown here:
 
@@ -52,18 +58,67 @@ File `template.typ` 'reads' the content from the `myst.yml` file and makes it av
 
 Files `aside_style.typ` is a file that helps to convert MyST aside to Typst notes.
 
-You can specify a logo, cover and ToC_depth in your `myst.yml` file, under exports.
+You can specify a logo, cover and ToC_depth in your `myst.yml` file, under exports, or even better in a `export.yml` file using `extends`
 
 ```yaml
+extends: 
+  - export.yml
+```
+
+```{code-block} yaml
+:filename: export.yml
+
+version: 1
+project:
+      
+# probably include the plugins as well
+
+  downloads:
+    - id: output-pdf1
+
   exports:
-    - format: typst
+    - id: output-pdf1
+      format: typst
       template: ../
       output: Test_typst_book_template2.pdf
-      id: output-pdf1
-      cover: Cover.PNG                        // replace with your own cover image
-      logo: logo.svg                          // replace with your own logo, at top of the paper
-      logo_width: 10                          // set a number (0-100) to set the logo width
-      ToC_depth: 1                            // set depth of the table of contents, 2 by default
+# additional options #
+
+# Include a figure at the cover page
+      cover: Cover.PNG
+      coverposition: 5  #in cm from title
+      cover_width: 8 #in cm
+
+# ToC
+      ToC_depth: 2
+      show_ToC: true
+
+
+# Page settings
+
+      #### Logo at top of position
+      logo: logo.svg
+      logo_width: 10
+
+      #### Looks
+      papersize: a4
+      margin_top: 2 #cm
+      margin_bottom: 2 #cm
+      margin_left: 20 #%
+      margin_right: 10 #%
+      show_pagenumber: true
+
+      #### Fonts
+      fontsize: 12
+      fontstyle: New Computer Modern
+      linespacing: .5
+      justification: false
+      
+      colortheme: blue.darken(30%)
+      #colorheadings:   
+```
+
+```{note}
+When the above options are not specified, default values are used as defined in `style.typ`.
 ```
 
 The cover will be placed on the cover page, the logo will be placed in the header of each content page.

@@ -64,7 +64,21 @@
   show_pagenumber: [-options.show_pagenumber-],
 [# endif #]
 
+[# if options.margin_top #]
+  margin_top: [-options.margin_top-]cm,
+[# endif #]
 
+[# if options.margin_bottom #]
+  margin_bottom: [-options.margin_bottom-]cm,
+[# endif #]
+
+[# if options.margin_left #]
+  margin_left: [-options.margin_left-]%,
+[# endif #]
+
+[# if options.margin_right #]
+  margin_right: [-options.margin_right-]%,
+[# endif #]
 
 [# if options.colortheme #]
   theme: [-options.colortheme-],

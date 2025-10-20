@@ -87,9 +87,18 @@ options:
   - id: fontsize
     type: number
     description: sets the fontsize
-  - id: margin
+  - id: margin_left
     type: number
-    description: sets the margins
+    description: sets margin left (as percentage)
+  - id: margin_right
+    type: number
+    description: sets margin right (as percentage)
+  - id: margin_top
+    type: number
+    description: sets margin top (in cm)
+  - id: margin_bottom
+    type: number
+    description: sets  margin bottom (in cm)
   - id: linespacing
     type: number
     description: sets the linespancing (default 0.5 (em))

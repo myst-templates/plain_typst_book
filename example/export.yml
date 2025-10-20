@@ -31,12 +31,15 @@ project:
 
       #### Looks
       papersize: a4
-      # margin: 
+      margin_top: 2 #cm
+      margin_bottom: 2 #cm
+      margin_left: 10 #%
+      margin_right: 10 #%
       show_pagenumber: true
 
       #### Fonts
       fontsize: 12
-      fontstyle: New Computer Modern
+      fontstyle: 
       linespacing: .5
       justification: false
       
