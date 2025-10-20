@@ -47,9 +47,9 @@
   font: "Libertinus Serif", 
   fontsize: 11pt,
 
-  // A color for the theme of the document
-  theme: red.darken(30%),
+    theme: red.darken(30%),
   colorheadings: black,
+  
   // The book's content.
   body
 ) = {

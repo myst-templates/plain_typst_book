@@ -112,7 +112,7 @@ project:
       justification: false
       
       colortheme: blue.darken(30%)
-      #colorheadings: 
+      colorheadings: navy
       
 ```
 
