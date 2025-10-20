@@ -23,13 +23,6 @@ project:
     - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/exercise/pdf_exercise.mjs
 
 
-      
-      # cover: Cover.PNG
-      # logo: logo.svg
-      # logo_width: 10
-      # ToC_depth: 1
-
-    
   toc:
   - file: README.md
   - file: contents/chapter_1.md

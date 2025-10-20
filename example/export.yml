@@ -15,12 +15,12 @@ project:
 
 # Include a figure at the cover page
       cover: Cover.PNG
-      coverposition: 1
-      cover_width: 5
+      coverposition: 5  #in cm from title
+      cover_width: 8 #in cm
 
 # ToC
-      ToC_depth: 1
-      show_ToC: false
+      ToC_depth: 2
+      show_ToC: true
 
 
 # Page settings

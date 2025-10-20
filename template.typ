@@ -61,7 +61,7 @@
 [# endif #]
 
 [# if options.show_pagenumber is defined #]
-  show_pagenumber: "[-options.show_pagenumber-]",
+  show_pagenumber: [-options.show_pagenumber-],
 [# endif #]
 
 
