@@ -44,14 +44,12 @@
   logo: none,
   logo_width: 10%,
   
-
-  
   font: "Libertinus Serif", 
   fontsize: 11pt,
 
   // A color for the theme of the document
   theme: red.darken(30%),
-  colorheadings: green,
+  colorheadings: black,
   // The book's content.
   body
 ) = {
@@ -65,7 +63,8 @@
     let nums = args.pos()
     let level = nums.len()
     if level == 1 {[#numbering("1.", ..nums)]} else {[#numbering("1.1.1", ..nums)]}
-    }   
+    },   
+    
 )
 
   // Set figure numbering to x.y where x is chapter number and y is figure number within chapter
@@ -146,10 +145,13 @@
     counter(figure).update(0)                // all figures (irrespective of kind)
     counter(figure.where(kind: table)).update(0) // specific for tables
     counter(math.equation).update(0)
-
+    
     it
   }
 
+  //Heading colors
+  show heading: set text(colorheadings)
+  
 
 // PAGE LAY OUT OF CONTENT
   set page(

@@ -84,6 +84,10 @@
   theme: [-options.colortheme-],
 [# endif #]
 
+[# if options.colorheadings #]
+  colorheadings: [-options.colorheadings-],
+[# endif #]
+
 [# if options.fontstyle #]
   font: "[-options.fontstyle-]",
 [# endif #]
