@@ -76,4 +76,4 @@ This template is created by [Freek Pols](https://github.com/FreekPols/) and [Luu
 
 ## License
 
-Content is licensed under [MIT License](https://opensource.org/license/mit)
+Content is provided with an [MIT License](https://opensource.org/license/mit).
