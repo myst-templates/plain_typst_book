@@ -11,7 +11,7 @@ project:
     - id: output-pdf
       format: typst
       template: ../
-      output: plain_typst_book.pdf
+      output: ./exports/plain_typst_book.pdf
 # additional options #
 
 # Include a figure at the cover page
