@@ -124,4 +124,4 @@ The cover will be placed on the cover page, the logo will be placed in the heade
 
 ## License
 
-Content is licensed under [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/).
+Content is licensed under [MIT License](https://opensource.org/license/mit)
