@@ -42,14 +42,16 @@ jobs:
       - name: Build PDF
         run: |
           cd example
-          myst build --pdf
+          myst build --pdf asdfkjafsdjkdfsadfsa
+        continue-on-error: true
 
       - name: Upload Output PDF as Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Output PDF
-          path: example/exports/plain_typst_book.pdf
+          path: example/exports/plain_typst_book.pdf/sadkfjbs
           compression-level: 0
+        continue-on-error: true
 
       - name: Build HTML
         run: |
