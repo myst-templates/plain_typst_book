@@ -39,7 +39,7 @@ jobs:
       - name: Install MyST Markdown with npm
         run: npm install -g mystmd
 
-      - name: Build PDF Asset
+      - name: Build PDF
         run: |
           cd example
           myst build --pdf
@@ -51,14 +51,15 @@ jobs:
           path: example/plain_typst_book.pdf
           compression-level: 0
 
-      - name: Build HTML Assets
+      - name: Build HTML
         run: |
           cd example
           myst build --html
         
-      - name: Upload Artifact
+      - name: Upload Output HTML as Artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          name: Output HTML
           path: './example/_build/html'
       
       - name: Deploy to GitHub Pages
