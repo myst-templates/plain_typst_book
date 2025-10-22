@@ -5,13 +5,13 @@ project:
     - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/exercise/pdf_exercise.mjs
 
   downloads:
-    - id: output-pdf1
+    - id: output-pdf
 
   exports:
-    - id: output-pdf1
+    - id: output-pdf
       format: typst
       template: ../
-      output: Test_typst_book_template2.pdf
+      output: plain_typst_book.pdf
 # additional options #
 
 # Include a figure at the cover page

@@ -44,6 +44,12 @@ jobs:
           cd example
           myst build --pdf
 
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: example-book-pdf
+          path: example/plain_typst_book.pdf
+
       - name: Build HTML Assets
         run: |
           cd example
