@@ -24,11 +24,10 @@ File `template.typ` "reads" the content from the `myst.yml` file and makes it av
 
 ## Template Options
 
-Template options are specified under the appropriate `exports` entry in the `myst.yml` file, or through utilizing `extends` (see [extends](extends)). When unspecified, default values defined in `style.typ` are used. The available options and types are listed and illustrated in file `example/export.yml`.
+Template options are specified under the appropriate `exports` entry in the `myst.yml` file, or through utilizing `extends` (see [extends](#define-options-in-a-separate-file)). When unspecified, default values defined in `style.typ` are used. The available options and types are listed and illustrated in file `example/export.yml`.
 
 The image for `cover` will be placed on the cover page, whereas the image for `logo` will be placed in the header of each content page.
 
-(extends=)
 ### Define options in a separate file
 
 It is possible to include all options for this template in a separate file using `extends`. This is illustrated in the example book of this repository using file `example/export.yml`, specified in `myst.yml` as follows:
