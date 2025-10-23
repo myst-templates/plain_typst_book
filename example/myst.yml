@@ -14,7 +14,7 @@ project:
   
   date: 2025-09-20 
 
-  description: This is a test for the plain_typst_book template. As example, we include a part of a chapter of a JB2 book used at Delft, University of Technology. #preface
+  description: 
 
   plugins:
     - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/example/example.mjs

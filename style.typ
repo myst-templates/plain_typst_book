@@ -30,7 +30,7 @@
   show_ToC: true,
 
   // PREFACE
-  description: "description",
+  preface: none,
 
   // SPECIFICATION of output
   paper-size: "a4",       // https://typst.app/docs/reference/layout/page/#parameters-paper
@@ -47,7 +47,7 @@
   font: "Libertinus Serif", 
   fontsize: 11pt,
 
-    theme: red.darken(30%),
+  theme: red.darken(30%),
   colorheadings: black,
   
   // The book's content.
@@ -116,26 +116,34 @@
   }
 
 
-// PREFACE, BASED ON DESCRIPTION
-  pagebreak()
-  if description != none {
+// PREFACE, 
+  if preface != none {
+    pagebreak()
     place(top + left, 
-      text(14pt, fill: red.darken(50%), "Preface")
+      text(14pt, fill: theme, "Preface")
     )
     v(1em)
     set par(justify: true)
-    align(center, box(width: 70%, text(11pt, overhang: true, font:  "New Computer Modern", fill: gray.darken(30%), description)))
+    align(center, box(width: 70%, text(11pt, overhang: true, font:  "New Computer Modern", fill: gray.darken(30%), preface)))
   }
 
 
 //OUTLINE OF THE BOOK
   pagebreak()
   if show_ToC == true {
+      
     show outline.entry.where(level: 1): it => {
       v(12pt, weak: true)
+      
       strong(it)
     }
-    outline(depth: ToC_depth, indent: auto)
+    // setting outline in themecolor
+    outline(
+    title: strong(text(fill: theme, "Contents")),
+    depth: ToC_depth,
+    indent: auto,
+  )
+
   }
 
 //RESETING NUMBERING

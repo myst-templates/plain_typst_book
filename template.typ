@@ -104,8 +104,9 @@
   justification: [-options.justification-],
 [# endif #]
 
-
-  description: "[-doc.description-]",
+[# if options.preface is defined #]
+  preface: "[-options.preface-]",
+[# endif #]
 
 )
 

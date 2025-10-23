@@ -1,11 +1,11 @@
 # MyST Template for Plain Typst Book
 
-This repository provides a plain Typst book template designed for use with MyST and Jupyter Book 2 to create a PDF document. It is designed to capture the non-interactive components of websites made using the book theme (bundled with MyST, as [described here](ttps://mystmd.org/guide/website-templates#default-web-themes)) for use as a [static export](https://mystmd.org/guide/quickstart-static-exports).In addition, the template is designed to help authors quickly set up a structured book project with MyST or Jupyter Book 2 while ensuring a professional layout and easy customization. The primary use case of this template is to allow authors to easily maintain a single document in two formats; in other words: a website and PDF document using the same source code.
+This repository provides a plain Typst book template designed for use with MyST and Jupyter Book 2 to create a PDF document. It is designed to capture the non-interactive components of websites made using the book theme (bundled with MyST, as [described here](ttps://mystmd.org/guide/website-templates#default-web-themes)) for use as a [static export](https://mystmd.org/guide/quickstart-static-exports). In addition, the template is designed to help authors quickly set up a structured book project with MyST or Jupyter Book 2 while ensuring a professional layout and easy customization. The primary use case of this template is to allow authors to easily maintain a single document in two formats; in other words: a website and PDF document using the same source code.
 
 The template features:
 
 - **Cover page**: Includes the book title, a cover figure, and author names. The cover figure can be vertically positioned (`coverpostion`) and resized (`cover_width`)
-- **Preface**: Automatically generated from the `description` section in the `myst.yml` file.
+- **Preface**: A preface which is specified using the `preface` key.
 - **Table of Contents**: Generated with a depth of 2 by default, can be specified in the myst.yml, the ToC can be toggled on/off using `show_ToC`
 - **Logo**: A logo at the top of each page, with adjustable width (`logo_width`)
 - **Adjustable layout**: Customizable page size (`papersize`), margins (`_top _bottom _left _right`), fonts (`fontstyle` and `fontsize`), line spacing (`linespacing`) and toggling pagenumber (`show_pagenumber`), justification and color themes (`colortheme` and `colorheadings`).
@@ -24,10 +24,11 @@ File `template.typ` "reads" the content from the `myst.yml` file and makes it av
 
 ## Template Options
 
-Template options (many of which were described above) are specified under the apporpriate `exports` entry in the `myst.yml` file. When unspecified, default values defined in `style.typ` are used. The available options and types are listed and illustrated in file `example/export.yml`.
+Template options are specified under the appropriate `exports` entry in the `myst.yml` file, or through utilizing `extends` (see [extends](extends)). When unspecified, default values defined in `style.typ` are used. The available options and types are listed and illustrated in file `example/export.yml`.
 
 The image for `cover` will be placed on the cover page, whereas the image for `logo` will be placed in the header of each content page.
 
+(extends=)
 ### Define options in a separate file
 
 It is possible to include all options for this template in a separate file using `extends`. This is illustrated in the example book of this repository using file `example/export.yml`, specified in `myst.yml` as follows:
