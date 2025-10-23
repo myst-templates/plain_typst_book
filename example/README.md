@@ -11,21 +11,5 @@ extends:
 
 In the `export.yml` file we include the export, including optional settings allowed for the template.yml file:
 
-```yml
-version: 1
-project:
-      
-  downloads:
-    - id: output-pdf1
-
-  exports:
-    - id: output-pdf1
-      format: typst
-      template: ../
-      output: Test_typst_book_template2.pdf
-      # additional options
-      cover: Cover.PNG
-      logo: logo.svg
-      logo_width: 10
-      ToC_depth: 1
+```{literalinclude} export.yml
 ```
