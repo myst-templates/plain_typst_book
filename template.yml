@@ -1,7 +1,7 @@
 jtex: v1
 kind: typst
-title: LaPreprint Typst Template
-description: Easily create beautiful preprints in Typst
+title: Plain Typst Book
+description: Easily create beautiful books in Typst
 template: template.typ
 
 files:
