@@ -10,7 +10,7 @@ project:
   exports:
     - id: output-pdf
       format: typst
-      template: ../
+      template: plain_typst_book
       output: ./exports/plain_typst_book.pdf
 # additional options #
 
