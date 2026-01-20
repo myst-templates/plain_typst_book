@@ -89,7 +89,8 @@
   set enum(indent: 10pt, body-indent: 9pt)
   set list(indent: 10pt, body-indent: 9pt)
 
-
+  // link behaviour
+  show link: set text( fill: blue.darken(30%))
 
 // COVERPAGE
   // Title, subtitle, 
@@ -161,7 +162,7 @@
   show heading: set text(colorheadings)
   
 
-// PAGE LAY OUT OF CONTENT
+// PAGE LAYOUT OF CONTENT
   set page(
     numbering: if show_pagenumber == true {"1"} else {none},         //turn on numbering
     margin: (

@@ -27,3 +27,4 @@ This is a note!
 
 A second section with a reference to equation {numref}`my-equation1` and {numref}`myFigure11`.
 
+with a [Link](https://example.com)
